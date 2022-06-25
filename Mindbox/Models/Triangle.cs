@@ -11,6 +11,8 @@ public class Triangle : IFigure
         get
         {
             var p = _sidesLength.Sum() / 2; // half perimeter
+            
+            // Heron's formula
             return Math.Sqrt(p * (p - _sidesLength[0]) * (p - _sidesLength[1]) * (p - _sidesLength[2]));
         }
     }
@@ -19,12 +21,13 @@ public class Triangle : IFigure
     {
         get
         {
+            // Sorting to find potential hypotenuse
             var sidesLength = _sidesLength.OrderBy(x => x).ToArray();
 
-            // Considering IEEE 754
+            // Pythagorean theorem
             return Math.Abs(
                 Math.Pow(sidesLength[0], 2) + Math.Pow(sidesLength[1], 2) - Math.Pow(sidesLength[2], 2)
-            ) < double.Epsilon;
+            ) < double.Epsilon; // Considering IEEE 754
         }
     }
 
