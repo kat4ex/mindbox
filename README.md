@@ -7,6 +7,7 @@
 - Проверку на то, является ли треугольник прямоугольным
 
 ## Рассуждения
+[![Build and test](https://github.com/kat4ex/mindbox/actions/workflows/tests.yml/badge.svg)](https://github.com/kat4ex/mindbox/actions/workflows/tests.yml)  
 
 Круг и треугольник - фигуры, у которых есть свойство **Площадь**.   
 
