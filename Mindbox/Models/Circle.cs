@@ -4,13 +4,14 @@ namespace Mindbox.Models;
 
 public class Circle : IFigure
 {
-    public double Area { get; }
+    public double Area => Math.PI * Math.Pow(_radius, 2);
+    private readonly double _radius;
 
     public Circle(double radius)
     {
         if (radius <= 0 || double.IsNaN(radius))
             throw new ArgumentException("The radius of the circle must be a positive number", nameof(radius));
 
-        Area = Math.PI * Math.Pow(radius, 2);
+        _radius = radius;
     }
 }
